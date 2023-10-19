@@ -1,0 +1,210 @@
+/* Importando a fonte "Roboto" do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos globais para todos os elementos */
+* {
+  font-family: 'Roboto', sans-serif; /* Define a fonte para todos os elementos */
+  box-sizing: border-box; /* Garante o modelo de caixa border-box */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove preenchimentos padrão */
+}
+
+/* Estilos para o corpo da página */
+body {
+  background-color: #000; /* Cor de fundo preta */
+  background-image: url("./img/ddd.png"); /* Imagem de fundo */
+  background-size: 100% 100%; /* Redimensiona para cobrir a tela */
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
+  background-attachment: fixed; /* Fixa a imagem de fundo */
+  margin: 0; /* Remove margens padrão */
+  display: flex; /* Usa o modelo de layout flex para centralizar conteúdo */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  min-height: 100vh; /* Garante altura mínima de tela cheia */
+}
+
+/* Estilos para o contêiner principal */
+.container {
+  background-color: #fff; /* Cor de fundo branca */
+  border-radius: 8px; /* Borda arredondada */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  text-align: center; /* Alinhamento de texto central */
+  padding: 20px; /* Preenchimento interno */
+  max-width: 400px; /* Largura máxima */
+  width: 100%; /* Largura total */
+  min-height: 1000px; /* Altura mínima */
+}
+
+/* Estilos para o título */
+h1 {
+  color: #333; /* Cor do texto */
+  margin-top: 0; /* Remove a margem superior */
+}
+
+/* Estilos para o contêiner de upload de imagem */
+.upload-container {
+  margin-top: 20px; /* Margem superior */
+}
+
+/* Estilos para o input de arquivo personalizado */
+.custom-file-input {
+  display: none; /* Oculta o elemento de entrada de arquivo padrão */
+}
+
+.custom-file-label {
+  background-color: #333; /* Cor de fundo do rótulo personalizado */
+  color: #fff; /* Cor do texto do rótulo personalizado */
+  padding: 10px 20px; /* Preenchimento do rótulo personalizado */
+  border-radius: 4px; /* Borda arredondada */
+  cursor: pointer; /* Cursor do mouse como ponteiro */
+  transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+}
+
+.custom-file-label:hover {
+  background-color: #555; /* Cor de fundo ao passar o mouse sobre o rótulo personalizado */
+}
+
+/* Estilos para o botão principal */
+.btn-primary {
+  background-color: #13b3c1; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  border: none; /* Sem borda */
+  padding: 10px 20px; /* Preenchimento do botão */
+  border-radius: 4px; /* Borda arredondada */
+  cursor: pointer; /* Cursor do mouse como ponteiro */
+  transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+  margin: 20px auto 10px; /* Margens e posicionamento */
+  display: none; /* Oculta o botão inicialmente */
+}
+
+.btn-primary:hover {
+  background-color: #093f3f; /* Cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Estilos para a imagem carregada */
+.uploaded-image {
+  display: none; /* Oculta a imagem carregada inicialmente */
+  max-width: 100%; /* Largura máxima de 100% */
+  height: auto; /* Altura automática proporcional */
+  margin: 20px auto; /* Margens e posicionamento */
+  border-radius: 15px; /* Borda arredondada */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Borda com transparência */
+}
+
+/* Estilos para a seção de carregamento */
+#loading {
+  margin-top: 30px; /* Margem superior */
+  display: none; /* Oculta a seção de carregamento inicialmente */
+}
+
+.loader {
+  width: 48px; /* Largura do indicador de carregamento */
+  height: 48px; /* Altura do indicador de carregamento */
+  border: 5px solid #000; /* Borda do indicador */
+  border-bottom-color: transparent; /* Parte inferior transparente para animação */
+  border-radius: 50%; /* Forma circular */
+  display: inline-block; /* Exibido como bloco em linha */
+  box-sizing: border-box; /* Caixa dimensionada pela borda */
+  animation: rotation 1s linear infinite; /* Animação de rotação */
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg); /* Início da rotação */
+  }
+  100% {
+    transform: rotate(360deg); /* Fim da rotação (uma revolução completa) */
+  }
+}
+
+#loading p {
+  font-weight: 700; /* Peso da fonte em negrito */
+}
+
+/* Estilos para o contêiner de resultados */
+.result-container {
+  display: none; /* Oculta o contêiner de resultados inicialmente */
+  margin-top: 20px; /* Margem superior */
+}
+
+/* Estilos para o texto de resultado */
+.result-text {
+  color: #333; /* Cor do texto */
+  font-weight: bold; /* Peso da fonte em negrito */
+}
+
+/* Estilos para a lista de etnias */
+.ethnicities-list {
+  height: 520px; /* Altura máxima da lista de etnias */
+  justify-content: space-between; /* Espaçamento entre elementos */
+  display: flex; /* Usando o modelo de layout flex */
+  flex-direction: column; /* Orientação da coluna */
+  margin: 20px auto; /* Margens e posicionamento */
+  background-color: #fff; /* Cor de fundo branca */
+  border-radius: 10px; /* Borda arredondada */
+  overflow: hidden; /* Oculta conteúdo além da altura máxima */
+  text-align: left; /* Alinhamento de texto à esquerda */
+}
+
+/* Estilos para os rótulos da lista de etnias */
+.ethnicities-list label {
+  font-size: 0.9em; /* Tamanho da fonte menor */
+  font-weight: 700; /* Peso da fonte em negrito */
+}
+
+/* Estilos para o contêiner de barra de progresso */
+.progress-container {
+  margin-top: 10px; /* Margem superior */
+}
+
+/* Estilos para a barra de progresso */
+.progress-bar {
+  background-color: #13b3c1; /* Cor de fundo da barra de progresso */
+  border-radius: 15px; /* Borda arredondada */
+  color: #000; /* Cor do texto na barra de progresso */
+  text-align: center; /* Alinhamento de texto no centro */
+  line-height: 30px; /* Altura da linha para alinhamento vertical */
+  transition: width 0.5s ease; /* Transição suave da largura */
+  font-weight: 700; /* Peso da fonte em negrito */
+  font-size: 1em; /* Tamanho da fonte */
+  margin-top: 5px; /* Margem superior */
+}
+
+/* Estilos para a seção de informações de etnia */
+etnia-info {
+  height: 80px; /* Altura máxima da seção de informações de etnia */
+  display: flex; /* Usando o modelo de layout flex */
+  justify-content: space-around; /* Espaçamento entre elementos */
+  flex-direction: column; /* Orientação da coluna */
+}
+
+/* Estilos para o título de probabilidade máxima */
+#maxProbabilityTitle {
+  font-size: 1.1em; /* Tamanho da fonte maior */
+  color: #000; /* Cor do texto */
+  font-weight: 700; /* Peso da fonte em negrito */
+}
+
+/* Estilos para o link da etnia */
+#link-etnia {
+  text-decoration: none; /* Sem decoração de texto (sublinhado) */
+  color: #13b3c1; /* Cor do link da etnia */
+  font-weight: 700; /* Peso da fonte em negrito */
+}
+
+/* Estilos para a classe de logotipo */
+.logo {
+  width: 50%; /* Largura de 50% */
+  height: auto; /* Altura automática proporcional */
+}
+
+/* Estilos para a marca d'água na página */
+.watermark {
+  position: fixed; /* Posição fixa na tela */
+  width: 50px; /* Tamanho da marca d'água (largura) */
+  height: 50px; /* Tamanho da marca d'água (altura) */
+  background-color: rgba(255, 0, 0, 0.5); /* Cor e transparência da marca d'água (vermelho semitransparente) */
+  border-radius: 50%; /* Forma circular */
+  pointer-events: none; /* Ignora eventos do mouse na marca d'água */
+  transform: translate(-50%, -50%); /* Centraliza a marca d'água no cursor do mouse */
+}

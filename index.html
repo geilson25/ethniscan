@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- Este é um projeto desenvolvido pela turma de Frontend da FAP-Softex | Pró-Criança, sob a orientação do Professor Breno Liberatto. O grupo responsável por esta aplicação é composto por Davi Roberto da Costa França, Ewerton Santos Gomes de Oliveira e Geilson Silva (Fidelis).</p>
+     Em Ethniscan, utilizamos modelos de aprendizado de máquina e o TensorFlow para identificar e prever a etnia com base em imagens carregadas. Esperamos que você aproveite o uso desta aplicação!
+     FAP-Softex | Recife,PE-2023
+    -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Ethniscan, etnia, identificação de etnia, modelo do Teachable Machine, previsão de etnia, aprendizado de máquina, TensorFlow, imagem">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./img/iconBgRemoved.png" type="image/png" />
+    <title>Ethniscan</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1><img src="./img/etnsIcon.png" alt="Ethniscan" class="logo" /></h1>
+      <div class="upload-container">
+        <input
+          type="file"
+          id="imageInput"
+          accept="image/*"
+          class="custom-file-input"
+        />
+        <label for="imageInput" class="custom-file-label"
+          >Clique aqui para adicionar uma foto</label
+        >
+      </div>
+      <img
+        id="uploadedImage"
+        class="uploaded-image"
+        src="#"
+        alt="Imagem carregada"
+      />
+      <div id="loading">
+        <span class="loader"></span>
+        <p>Aguarde...</p>
+      </div>
+      <div id="result" class="result-container">
+        <div class="etnia-info">
+          <h1 id="maxProbabilityTitle"></h1>
+          <a id="link-etnia" target="_blank">Informações sobre a etnia</a>
+        </div>
+        <div id="ethnicitiesList" class="ethnicities-list"></div>
+      </div>
+      <button id="identifyButton" class="btn-primary">Identificar Etnia</button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
