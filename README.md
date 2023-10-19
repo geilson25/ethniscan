@@ -65,7 +65,7 @@ Este projeto é distribuído sob a licença MIT. Consulte o arquivo `LICENSE` pa
 ## Créditos
 
 - Prof. Breno Liberatto: Orientação do projeto.
-- [Davi Roberto da Costa França](https://github.com/daviroberto): (Java Script).
+- [Davi Roberto da Costa França](https://github.com/daviroberto1): (Java Script).
 - [Ewerton Santos Gomes de Oliveira](https://github.com/Ewertonsgo): HTML, CSS, criação e treinamento da model no Teacheble Machine.
 - [Geilson Silva (Fidelis)](https://github.com/geilson25): HTML, CSS, Gestão do Projeto e apresentação do Ciclo de Vida de Desenvolvimento.
 
